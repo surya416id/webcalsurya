@@ -1,4 +1,4 @@
-FROM maven as build
+FROM maven:3-openjdk-8 as build
 WORKDIR /app
 COPY . /app
 RUN mvn package
