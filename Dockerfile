@@ -4,4 +4,4 @@ COPY . /app
 RUN mvn package
 
 FROM tomcat:9.0
-COPY --from=build target/suryapp-1.2.war /usr/local/tomcat/webapps/suryapp-1.2.war
+COPY --from=build /app/target/suryapp-1.2.war /usr/local/tomcat/webapps/suryapp-1.2.war
